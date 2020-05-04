@@ -143,7 +143,7 @@ hr {
 }
 
 .header .site_title_container .site_title a span {
-  display: none;
+  display: block;
 }
 
 .header .site_title_container .site_title a:hover {
@@ -330,7 +330,7 @@ hr {
 }
 
 .footer .powered_by a {
-  color: #cccccc;
+  color: #424242;
   margin: 0 2px;
 }
 
