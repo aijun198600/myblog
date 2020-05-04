@@ -1,0 +1,55 @@
+{{ $pages := where $.Paginator.Pages "Params.hidden" "ne" true }}
+{{ $paginator := .Paginate (where $pages "Type" "posts") }}
+{{ range $paginator.Pages }}
+<div class="post animated fadeInDown">
+  <div class="post_title">
+    <h2><a href='{{ .RelPermalink }}'>{{ .Title }}</a></h2>
+  </div>
+<!--  {{ if .Site.Params.Description }}-->
+  <div class="list">
+    <div class="post_content markdown">
+<!--      <p>{{ .Summary }}......</p>-->
+      {{ with .Description }}
+      <p>{{ . }}</p>
+      {{ else }}
+      <p>{{ .Summary}}</p>
+      {{ end }}
+    </div>
+  </div>
+<!--  {{ end }}-->
+  <div class="post_footer">
+    <div class="meta">
+      <div class="info">
+        <span class="field">
+          <i class="remixicon-map-pin-time-line"></i>
+          <span class="date">{{ .Date.Format "2006.01.02" }}</span>
+        </span>
+        {{ with .Params.tags }}
+        <span class="field tags">
+          <i class="remixicon-stack-line"></i>
+          {{ range . }}
+          <a href="{{ "tags" | absURL }}/{{ . | urlize }}/">{{ . }}</a>
+          {{ end }}
+        </span>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+<div class="pagination">
+  {{ $pag := $.Paginator }}
+  {{ if gt $pag.TotalPages 1 }}
+  {{ if $pag.HasPrev }}
+  <a href="{{$paginator.Prev.URL}}" class="pre">
+    {{ T "prev_page" }}
+  </a>
+  {{ end }}
+  {{ if $pag.HasNext }}
+  <a href="{{$paginator.Next.URL}}" class="next">
+    {{ T "next_page" }}
+  </a>
+  {{ end }}
+  {{ end }}
+</div>
