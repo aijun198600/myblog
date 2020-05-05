@@ -1,7 +1,11 @@
 ---
+layout: post
 title: 如何开发一个评分控件(二)：CALayer遮罩(mask)
 date: 2016-10-08
-tags:
+tags: 
+    - iOS
+    - CALayer
+categories: [ Code ]
 ---
 
 ![评分控件的最终效果](http://upload-images.jianshu.io/upload_images/452988-70c6adfbca03e49d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

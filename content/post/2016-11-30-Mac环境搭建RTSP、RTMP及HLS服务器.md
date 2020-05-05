@@ -3,6 +3,8 @@ layout: post
 title: Mac环境搭建RTSP、RTMP及HLS服务器
 date: 2016-11-30
 tags:
+    - 直播
+categories: [ Code ]
 ---
 
 > 因为工作项目中需要用到点播、直播等内容，但是服务器端的网速太渣，为了节省等待时间，因此在本地搭建了RTSP、RTMP以及HLS服务器。

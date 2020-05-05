@@ -14,9 +14,9 @@ disqusShortname = ""                 # your discuss shortname
   name = "南柯一梦"
 
 [params]
-  subTitle = "诗歌， 代码，人生，梦想"                                       # site's subTitle  # 网站二级标题
+  subTitle = "代码，诗歌，人生，梦想"                                       # site's subTitle  # 网站二级标题
   footerSlogan = "南柯一梦的个人博客"                                          # site's footer slogan  # 网站页脚标语
-  keywords = ["诗歌", "代码","人生", "梦想"]                                  # site's keywords  # 网站关键字
+  keywords = ["诗歌","代码","人生","梦想"]                                  # site's keywords  # 网站关键字
   description = "南柯一梦的个人博客"                        # site's description  # 网站描述
   since = "2016"            # Site creation time          # 站点建立时间
   beihAn = "湘ICP备19012494号-3"   # 备案号
@@ -31,10 +31,15 @@ disqusShortname = ""                 # your discuss shortname
   identifier = "home"
   url = "/"
 [[menu.main]]
-  name = "归档"
+  name = "代码"
   weight = 20
   identifier = "archive"
   url = "/post/"
+[[menu.main]]
+  name = "诗歌"
+  weight = 20
+  identifier = "poetry"
+  url = "/poetry/"
 [[menu.main]]
   name = "标签"
   weight = 30
