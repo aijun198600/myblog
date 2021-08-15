@@ -1,0 +1,15 @@
+{
+  "name": "hugo-blog",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "hugo server -D --config=\"./iappfactory.com.toml\"",
+    "build:iappfactory": "hugo --config=\"./iappfactory.com.toml\" -d ./public/iappfactory.com",
+    "build:amazecoder": "hugo --config=\"./amazecoder.com.toml\" -d ./public/amazecoder.com",
+    "build:codestduy": "hugo --config=\"./codestduy.com.toml\" -d ./public/codestduy.com",
+    "build:document": "hugo --config=\"./document.org.cn.toml\" -d ./public/document.org.cn",
+    "build:staydawn": "hugo --config=\"./staydawn.com.toml\" -d ./public/staydawn.com",
+    "build": "npm run build:iappfactory | npm run build:amazecoder | npm run build:codestduy | npm run build:document | npm run build:staydawn"
+  },
+  "dependencies": {
+  }
+}

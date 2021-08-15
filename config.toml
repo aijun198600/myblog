@@ -20,7 +20,7 @@ disqusShortname = ""                 # your discuss shortname
   description = "南柯一梦的个人博客"                        # site's description  # 网站描述
   since = "2016"            # Site creation time          # 站点建立时间
   beihAn = "湘ICP备19012494号-3"   # 备案号
-  beianUrl = "http://www.beian.miit.gov.cn" # 备案号网址
+  beianUrl = "https://beian.miit.gov.cn" # 备案号网址
 
 [blackfriday]
   smartypants = false

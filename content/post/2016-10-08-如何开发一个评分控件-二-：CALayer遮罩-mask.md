@@ -8,7 +8,7 @@ tags:
 categories: [ Code ]
 ---
 
-![评分控件的最终效果](http://upload-images.jianshu.io/upload_images/452988-70c6adfbca03e49d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![评分控件的最终效果.png](/images/2016-10-08/last-rate-component.webp)
 
 > 前一篇文章已经把UIBezierPath对象的一些操作基础都做了说明，现在离最终效果只差最后一步了。需要了解前面文章的内容，可以点击链接[如何开发一个评分控件(一)](http://www.jianshu.com/p/ea74c10a03c2)进行查看。
 如果只想直接使用已经封装好的控件，可以直接点击[https://github.com/aijun198600/AJScoreView](https://github.com/aijun198600/AJScoreView)使用。
@@ -19,8 +19,7 @@ categories: [ Code ]
 
 首先我们需要先下载一张svg矢量图，比如twitter的小鸟图标，然后svg拖动到PaintCode里面，就可以自动生成UIBezierPath对象的代码了。
 
-
-![PaintCode矢量图.png](http://upload-images.jianshu.io/upload_images/452988-a6b4a0be24bc0630.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![PaintCode矢量图.png](/images/2016-10-08/paint-code-twitter.webp)
 
 通过PaintCode生成的UIBezierPath对象代码，我们只需要UIBezierPath的对象，不需要颜色填充，整理后代码如下:
 
@@ -88,7 +87,7 @@ categories: [ Code ]
 ```
 和我们预期的一样，五只小鸟出来了！
 
-![五只小鸟.png](http://upload-images.jianshu.io/upload_images/452988-06a57bd15edb50c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![五只小鸟.png](/images/2016-10-08/five-bird.webp)
 
 # DrawRect实现
 
@@ -118,7 +117,7 @@ categories: [ Code ]
 ```
 其中```scaleW = pathBounds.size.width * scale```是缩放后的小鸟的frame大小，```5.0 * scale```是每个小鸟之间的间距。
 
-![3.5只小鸟.png](http://upload-images.jianshu.io/upload_images/452988-1f25bc6184efda82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![3.5只小鸟.png](/images/2016-10-08/five-bird-3.5.webp)
 
 看起来我们的目标已经达到了，后续封装只要把```UIBezierPath```和```score```存起来就可以了，当```score```设置时，只要调用```[self setNeedDisplay]```强制重绘界面就可以了。
 
@@ -204,7 +203,7 @@ categories: [ Code ]
 ```
 像上面的代码一样，```selectRect```的计算的区域还是和drawRect部分是一样。
 
-![DrawRect 上、CAShapeLayer下.png](http://upload-images.jianshu.io/upload_images/452988-e7e5297b6c161d86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![DrawRect 上、CAShapeLayer下.png](/images/2016-10-08/on-draw-or-calayer.webp)
 
 可以看出来两个效果是一样的。我们现在只需要将```score ```和```path```剥离出来就可以组成复用的控件了。两者的区别是，当```score```设置时，当使用DrawRect时需要调用```[self setNeedDisplay];```强制重绘界面，而使用CAShapeLayer时就需要调用```[self setNeedsLayout];```强制重新调整布局就好了。
 

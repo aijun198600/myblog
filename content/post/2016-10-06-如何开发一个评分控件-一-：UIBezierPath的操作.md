@@ -45,7 +45,7 @@ categories: [ Code ]
 ```
 代码生成的界面也很简单，就是一个灰色的星星。
 
-![灰色星星.png](http://upload-images.jianshu.io/upload_images/452988-464243f0859c3c6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![灰色星星.png](/images/2016-10-06/gray-star.webp)
 
 星星已经得到了，现在我们想要只显示半颗星星，这样就可以实现我们想要的**0.5分**的效果了。那如何做呢？
 办法当然有了，我们可以获取UIBezierPath对象的位置和尺寸，然后拿一个方块去遮住它的半边，那不就可以了。继续在自定义UIView的```- (void)drawRect:(CGRect)rect```方法后面添加代码：
@@ -58,7 +58,7 @@ categories: [ Code ]
     [rectPath fill];
 ```
 
-![遮住的星星.png](http://upload-images.jianshu.io/upload_images/452988-1ddcb95c1e675fa1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![遮住的星星.png](/images/2016-10-06/cover-star.webp)
 
 如果把颜色改成白色的，那么半个星星已经达到了。
 
@@ -75,7 +75,7 @@ categories: [ Code ]
     [starPath fill];
 ```
 
-![第一次组合.png](http://upload-images.jianshu.io/upload_images/452988-b9cc4637623d0f30.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![第一次组合.png](/images/2016-10-06/first-combine-star.webp)
 
 从上面的效果可以看出来，```usesEvenOddFillRule```的效果是将两个路径组合在一起并去除掉交集，所以这次的路径并不包括左边的半颗星星。我们如果用现在的路径继续去和rectPath去组合，就能得到右边的半颗星星了。
 
@@ -88,17 +88,17 @@ categories: [ Code ]
     [starPath fill];
 ```
 
-![第二次组合.png](http://upload-images.jianshu.io/upload_images/452988-351194ea6ec48217.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![第二次组合.png](/images/2016-10-06/second-combine-star.webp)
 
 经过第二次的组合操作， 我们可以看到效果已经非常接近想要的效果，我们现在可以试着把组合过程的红色和黄色代码都去掉，效果已经出来了啊。
 
-![去掉组合颜色.png](http://upload-images.jianshu.io/upload_images/452988-aa2a49dc0900e3b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![去掉组合颜色.png](/images/2016-10-06/filter-combine-color.webp)
 
 算是已经达成目标了，我们刚开始的灰色替换成红色，把蓝色替换成灰色，就成了想要的效果了。我们也可以尝试把rectPath的宽度比例修改成其他比例，效果如下：
 
-![宽度比例为0.3.png](http://upload-images.jianshu.io/upload_images/452988-7e4a8ceaf426823c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![宽度比例为0.5.png](http://upload-images.jianshu.io/upload_images/452988-1649d72b00133903.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![宽度比例为0.8.png](http://upload-images.jianshu.io/upload_images/452988-496b9c86f6380e9e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![宽度比例为0.3.png](/images/2016-10-06/rate-0.3.webp)
+![宽度比例为0.5.png](/images/2016-10-06/rate-0.5.webp)
+![宽度比例为0.8.png](/images/2016-10-06/rate-0.8.webp)
 
 好啦，单个星星的比例已经搞定了，此时的自定义的UIView也可以其他背景颜色，都不会影响我们的星星形状了。下面就是最终的代码：
 ```
@@ -164,7 +164,7 @@ categories: [ Code ]
 ```
 不过我们为了显示明显，讲UIView的背景颜色设置为橙色了。
 
-![带背景颜色的灰色星星.png](http://upload-images.jianshu.io/upload_images/452988-b10626ce88d1d275.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![带背景颜色的灰色星星.png](/images/2016-10-06/gray-star-with-background.webp)
 
 我们是通过UIBezierPath对象的```- (void)applyTransform:(CGAffineTransform)*transform*```方法来进行形变的，在```drawRect```方法中继续添加形变代码:
 ```
@@ -183,7 +183,7 @@ categories: [ Code ]
 ```
 通过复制和平移动作，我们就得到了五个绿色的星星啦，并且把路径存在totalPath中。
 
-![复制平移为五颗星星.png](http://upload-images.jianshu.io/upload_images/452988-1a83b4fb9e66b97f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![复制平移为五颗星星.png](/images/2016-10-06/copy-five-star.webp)
 
 虽然我们得到了五颗星星，但是它还是大小固定的，而且星星的位置不是居中的，我们将通过缩放操作来适配大小。继续在复制平移的操作后面添加代码：
 ```
@@ -198,7 +198,7 @@ categories: [ Code ]
     [totalPath applyTransform:CGAffineTransformMakeScale(scale,scale)];
 ```
 
-![缩放操作之后的星星.png](http://upload-images.jianshu.io/upload_images/452988-8851444be76328dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![缩放操作之后的星星.png](/images/2016-10-06/scale-five-star.webp)
 
 缩放操作之后的星星位置不对，我们需要通过平移对位置进行修正，同时把刚开始填充的灰色去掉。
 
@@ -213,7 +213,7 @@ categories: [ Code ]
 ```
 修正后的效果如下：
 
-![修正位置的效果.png](http://upload-images.jianshu.io/upload_images/452988-148fcf1fa71ef295.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![修正位置的效果.png](/images/2016-10-06/fix-scale-five-star.webp)
 
 本文的代码可以在[https://github.com/aijun198600/AJScoreViewExample](https://github.com/aijun198600/AJScoreViewExample)查看。
 

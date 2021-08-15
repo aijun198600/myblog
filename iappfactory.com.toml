@@ -1,0 +1,80 @@
+baseURL = "https://www.amazecoder.com"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"
+title = "个人开发记"                    # site title  # 网站标题
+theme = "zozo"
+hasCJKLanguage = true                # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
+summaryLength = 100
+paginate = 10                         # shows the number of articles  # 首页显示文章数量
+enableEmoji = true
+googleAnalytics = ""                 # your google analytics id
+disqusShortname = ""                 # your discuss shortname
+
+[author]                             # essential                     # 必需
+name = "南柯一梦"
+
+[params]
+subTitle = "代码，诗歌，人生，梦想"                                       # site's subTitle  # 网站二级标题
+footerSlogan = "南柯一梦的个人博客"                                          # site's footer slogan  # 网站页脚标语
+keywords = ["诗歌","代码","人生","梦想"]                                  # site's keywords  # 网站关键字
+description = "南柯一梦的个人博客"                        # site's description  # 网站描述
+since = "2016"            # Site creation time          # 站点建立时间
+beihAn = "湘ICP备19012494号-1"   # 备案号
+beianUrl = "https://beian.miit.gov.cn" # 备案号网址
+
+[blackfriday]
+smartypants = false
+
+[[menu.main]]                        # config your menu  # 配置菜单
+name = "首页"
+weight = 10
+identifier = "home"
+url = "/"
+[[menu.main]]
+name = "代码"
+weight = 20
+identifier = "archive"
+url = "/post/"
+[[menu.main]]
+name = "诗歌"
+weight = 20
+identifier = "poetry"
+url = "/poetry/"
+[[menu.main]]
+name = "标签"
+weight = 30
+identifier = "tags"
+url = "/tags/"
+[[menu.main]]
+name = "关于"
+weight = 40
+identifier = "about"
+url = "/top/about"
+
+# mathjax
+enableMathJax = true                                                 # enable mathjax  # 是否使用mathjax（数学公式）
+
+enableSummary = true                                                 # display the article summary  # 是否显示文章摘要
+
+[params.gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
+owner = "aijun198600"              # Your GitHub ID
+repo = "https://github.com/aijun198600/myblog"               # The repo to store comments
+clientId = "5d1979c8bc5f47a5c179"           # Your client ID
+clientSecret = "2ac19afec976af239ca7d5ad2e6f107626091a4f"       # Your client secret
+
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://valine.js.org
+[params.valine]
+enable = true
+appId = "PdmJCiPgNWIiA4NYyGAH09gF-gzGzoHsz"
+appKey = "uynvWs56UtrWG6CUWsanehyk"
+placeholder = "说点什么吧..."
+visitor = false
+
+[social]
+github = "https://github.com/aijun198600"
+twitter = ""
+facebook = ""
+weibo = ""
+instagram = ""
