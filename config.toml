@@ -15,9 +15,9 @@ disqusShortname = ""                 # your discuss shortname
 
 [params]
   subTitle = "代码，诗歌，人生，梦想"                                       # site's subTitle  # 网站二级标题
-  footerSlogan = "南柯一梦的个人博客"                                          # site's footer slogan  # 网站页脚标语
+  footerSlogan = "南柯一梦的个人网页"                                          # site's footer slogan  # 网站页脚标语
   keywords = ["诗歌","代码","人生","梦想"]                                  # site's keywords  # 网站关键字
-  description = "南柯一梦的个人博客"                        # site's description  # 网站描述
+  description = "南柯一梦的个人网页"                        # site's description  # 网站描述
   since = "2016"            # Site creation time          # 站点建立时间
   beihAn = "湘ICP备19012494号-3"   # 备案号
   beianUrl = "https://beian.miit.gov.cn" # 备案号网址

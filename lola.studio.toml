@@ -1,7 +1,7 @@
-baseURL = "https://www.amazecoder.com"
+baseURL = "https://www.iappfactory.com"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"
-title = "疯狂编码学习"                    # site title  # 网站标题
+title = "Lola的花园"                    # site title  # 网站标题
 theme = "zozo"
 hasCJKLanguage = true                # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 summaryLength = 100
@@ -19,7 +19,7 @@ footerSlogan = "南柯一梦的个人网页"                                    
 keywords = ["诗歌","代码","人生","梦想"]                                  # site's keywords  # 网站关键字
 description = "南柯一梦的个人网页"                        # site's description  # 网站描述
 since = "2016"            # Site creation time          # 站点建立时间
-beihAn = "湘ICP备19012494号-5"   # 备案号
+beihAn = "湘ICP备19012494号-6"   # 备案号
 beianUrl = "https://beian.miit.gov.cn" # 备案号网址
 
 [blackfriday]

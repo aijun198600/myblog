@@ -8,7 +8,8 @@
     "build:codestduy": "hugo --config=\"./codestduy.com.toml\" -d ./public/codestduy.com",
     "build:document": "hugo --config=\"./document.org.cn.toml\" -d ./public/document.org.cn",
     "build:staydawn": "hugo --config=\"./staydawn.com.toml\" -d ./public/staydawn.com",
-    "build": "npm run build:iappfactory | npm run build:amazecoder | npm run build:codestduy | npm run build:document | npm run build:staydawn"
+    "build:lola": "hugo --config=\"./lola.studio.toml\" -d ./public/lola.studio",
+    "build": "npm run build:iappfactory | npm run build:amazecoder | npm run build:codestduy | npm run build:document | npm run build:staydawn | npm run build:lola"
   },
   "dependencies": {
   }
